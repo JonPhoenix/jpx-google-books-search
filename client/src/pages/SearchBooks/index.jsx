@@ -16,17 +16,17 @@ function SearchPage() {
     fetch("https://www.googleapis.com/books/v1/volumes?q=" + searchString)
       .then((resp) => resp.json())
       .then((result) => {
-        console.log(result.items);
+        console.log(result.items); // Delete in final review
 
         setSearchResults(
           result.items.map((book) => {
             return {
               _id: book.id,
               title: book.volumeInfo.title,
-              image: book.volumeInfo.imageLinks.thumbnail,
               authors: book.volumeInfo.authors,
-              link: book.volumeInfo.previewLink,
               description: book.volumeInfo.description,
+              image: book.volumeInfo.imageLinks.thumbnail,
+              link: book.volumeInfo.previewLink,
             };
           })
         );
