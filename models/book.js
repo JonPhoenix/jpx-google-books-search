@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const GoogleBookSchema = new Schema({
+const BookSchema = new Schema({
   _id: {
     type: String,
     trim: true,
@@ -35,6 +35,6 @@ const GoogleBookSchema = new Schema({
   },
 });
 
-const GoogleBook = mongoose.model('Book', GoogleBookSchema);
+const Book = mongoose.model('Book', BookSchema);
 
-module.exports = GoogleBook;
+module.exports = Book;
