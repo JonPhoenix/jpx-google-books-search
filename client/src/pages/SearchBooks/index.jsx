@@ -44,7 +44,7 @@ function SearchPage() {
                 type="text"
                 className="form-control"
                 name="searchinput"
-                placeholder="Search by Book Name"
+                placeholder="Enter Book Name"
               />
             </div>
             <button type="submit" className="btn btn-primary">
