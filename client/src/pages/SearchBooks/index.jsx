@@ -25,7 +25,11 @@ function SearchPage() {
               title: book.volumeInfo.title,
               authors: book.volumeInfo.authors,
               description: book.volumeInfo.description,
-              image: book.volumeInfo.imageLinks.thumbnail,
+              // Reads property thumbnail every search
+              image:
+                book.volumeInfo.imageLinks === undefined
+                  ? ""
+                  : book.volumeInfo.imageLinks.thumbnail,
               link: book.volumeInfo.previewLink,
             };
           })
