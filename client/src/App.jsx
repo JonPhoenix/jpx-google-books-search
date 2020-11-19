@@ -7,14 +7,14 @@ import SearchBooks from "./pages/SearchBooks";
 // import SavedBooks from "./pages/SavedBooks";
 
 // Import components
-// NavBar
+import NavBar from "./components/NavBar";
 // Header
 
 function App() {
   return (
     <Router>
-      {/* <NavBar />
-      <Banner /> */}
+      <NavBar />
+      {/* <Banner /> */}
       <Switch>
         <Route exact path={"/"}>
           <SearchBooks />
