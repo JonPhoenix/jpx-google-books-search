@@ -8,13 +8,13 @@ import SearchBooks from "./pages/SearchBooks";
 
 // Import components
 import NavBar from "./components/NavBar";
-// Header
+import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
       <NavBar />
-      {/* <Banner /> */}
+      <Header />
       <Switch>
         <Route exact path={"/"}>
           <SearchBooks />
