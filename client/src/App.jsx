@@ -4,7 +4,7 @@ import "./App.css";
 
 // Import pages
 import SearchBooks from "./pages/SearchBooks";
-// import SavedBooks from "./pages/SavedBooks";
+import SavedBooks from "./pages/SavedBooks";
 
 // Import components
 import NavBar from "./components/NavBar";
@@ -19,9 +19,9 @@ function App() {
         <Route exact path={"/"}>
           <SearchBooks />
         </Route>
-        {/* <Route exact path={"/saved"}>
+        <Route exact path={"/saved"}>
           <SavedBooks />
-        </Route> */}
+        </Route>
       </Switch>
     </Router>
   );
