@@ -1,0 +1,13 @@
+.navbar {
+  border-radius: 0;
+}
+
+.nav-item {
+  background-color: white;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.nav-tabs {
+  background-color: white;
+}

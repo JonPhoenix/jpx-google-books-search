@@ -22,6 +22,9 @@ function App() {
         <Route exact path={"/saved"}>
           <SavedBooks />
         </Route>
+        <Route exact path={"/saved"}>
+          <SavedBooks />
+        </Route>
       </Switch>
     </Router>
   );
