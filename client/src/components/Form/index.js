@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchForm({ q, handleInputChange, handleFormSubmit }) {
+function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
     <form>
     <div className="form-row">
@@ -25,4 +25,4 @@ function SearchForm({ q, handleInputChange, handleFormSubmit }) {
   );
 }
 
-export default SearchForm;
+export default Form;

@@ -1,0 +1,13 @@
+.btn-container {
+  float: right;
+}
+
+.btn-container {
+  background-color: slateblue;
+}
+
+@media (max-width: 767px) {
+  .btn-container {
+    margin-bottom: 15px;
+  }
+}

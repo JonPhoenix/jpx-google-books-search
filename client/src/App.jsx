@@ -8,24 +8,18 @@ import SavedBooks from "./pages/SavedBooks";
 
 // Import components
 import NavBar from "./components/NavBar";
-import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
-      <NavBar />
-      <Header />
-      <Switch>
-        <Route exact path={"/"}>
-          <SearchBooks />
-        </Route>
-        <Route exact path={"/saved"}>
-          <SavedBooks />
-        </Route>
-        <Route exact path={"/saved"}>
-          <SavedBooks />
-        </Route>
-      </Switch>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={SearchBooks} />
+          <Route exact path="/saved" component={SearchBooks} />
+          <Route exact path="/search" component={SavedBooks} />
+        </Switch>
+      </div>
     </Router>
   );
 }
