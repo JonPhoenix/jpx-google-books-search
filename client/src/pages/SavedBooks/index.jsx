@@ -5,7 +5,7 @@ import Book from "../../components/Book";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { List } from "../../components/BookList";
+import { List } from "../../components/List";
 
 class Saved extends Component {
   state = {
@@ -27,7 +27,7 @@ class Saved extends Component {
   };
 
   handleBookDelete = (id) => {
-    API.deleteBook(id).then((res) => this.getSavedBooks());
+    API.deleteBook(id).then(() => this.getSavedBooks());
   };
 
   render() {
@@ -39,7 +39,9 @@ class Saved extends Component {
               <h1 className="text-center">
                 <strong>Google Books Search</strong>
               </h1>
-              <h2 className="text-center">Search n Save</h2>
+              <h2 className="text-center">
+                Search for and Save Books of Interest
+              </h2>
             </Jumbotron>
           </Col>
         </Row>
@@ -80,51 +82,3 @@ class Saved extends Component {
 }
 
 export default Saved;
-
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-// import BookCard from "../../components/BookCard";
-
-// function SavedPage() {
-//   const [savedBooks, setSavedBooks] = useState([]);
-
-//   const deleteBook = (event) => {
-//     let id = event.target.getAttribute("id");
-//     axios.delete("/api/books/" + id).then(() => {
-//       setSavedBooks(savedBooks.filter((book) => book._id !== id));
-//     });
-//   };
-
-//   useEffect(() => {
-//     fetch("/api/books")
-//       .then((result) => result.json())
-//       .then((result) => {
-//         setSavedBooks(result);
-//       });
-//   }, []);
-
-//   return (
-//     <div className="container">
-//       <section className="row border border-secondary p-3">
-//         <div className="col">
-//           <div className="card">
-//             <div className="card-header">Saved</div>
-//             <div className="card-body">
-//               {savedBooks.map((book, index) => (
-//                 <BookCard
-//                   key={index}
-//                   index={index}
-//                   buttonText="Remove"
-//                   buttonClicked={deleteBook}
-//                   book={book}
-//                 />
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-// export default SavedPage;
