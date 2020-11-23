@@ -12,22 +12,24 @@ import NavBar from "./components/NavBar";
 // Setup Route components
 function App() {
   return (
-    <Router>
-      <div>
-        <NavBar />
-        <Switch>
-          <Route exact path={"/"}>
-            <SearchBooks />
-          </Route>
-          <Route exact path={"/saved"}>
-            <SavedBooks />
-          </Route>
-          <Route>
-            <NoMatchPage />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <>
+      <Router>
+        <div>
+          <NavBar />
+          <Switch>
+            <Route exact path={"/"}>
+              <SearchBooks />
+            </Route>
+            <Route exact path={"/saved"}>
+              <SavedBooks />
+            </Route>
+            <Route>
+              <NoMatchPage />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </>
   );
 }
 
