@@ -5,41 +5,33 @@ import "./style.css";
 function NavBar() {
   return (
     <>
-      <nav className="nav-item">
+      <nav className="navbar justify-content-start">
         <Link
           to="/"
           className={
             window.location.pathname === "/" ? "nav-link active" : "nav-link"
           }
         >
-          Google Books
+          Home
         </Link>
-        <ul className="nav nav-tabs">
-          <li className="nav-item">
-            <Link
-              to="/"
-              className={
-                window.location.pathname === "/"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Search
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/saved"
-              className={
-                window.location.pathname === "/saved"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Saved
-            </Link>
-          </li>
-        </ul>
+        <Link
+          to="/"
+          className={
+            window.location.pathname === "/" ? "nav-link active" : "nav-link"
+          }
+        >
+          Search
+        </Link>
+        <Link
+          to="/saved"
+          className={
+            window.location.pathname === "/saved"
+              ? "nav-link active"
+              : "nav-link"
+          }
+        >
+          Saved
+        </Link>
       </nav>
     </>
   );
