@@ -1,4 +1,5 @@
 import React from "react";
+import "../../css/style.css";
 
 // Exporting the Container, Row, and Col elements
 
