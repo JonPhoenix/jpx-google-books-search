@@ -3,11 +3,12 @@
 }
 
 .btn-container {
-  background-color: slateblue;
+  background-color: lightgray;
 }
 
 @media (max-width: 767px) {
   .btn-container {
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
   }
 }

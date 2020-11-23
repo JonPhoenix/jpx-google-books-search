@@ -11,7 +11,7 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
           type="text"
           onChange={handleInputChange}
           className="form-control"
-          placeholder="Search Books"
+          placeholder="Find a Book"
           id="book"
         />
       </div>

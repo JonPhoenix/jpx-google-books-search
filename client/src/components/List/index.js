@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 // Exports both the List and ListItem components
 export const List = ({ children }) => (
