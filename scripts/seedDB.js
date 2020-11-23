@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const db = require("../models");
 
+// This file empties the Books collection and inserts the books below
+
 mongoose.connect(
     process.env.MONGODB_URI || 
     "mongodb://localhost/googlebooks"
@@ -15,7 +17,6 @@ const bookSeed = [
         link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
     }
 ];
-
 
 db.Book
     .remove({})
