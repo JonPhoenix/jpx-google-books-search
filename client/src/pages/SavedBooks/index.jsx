@@ -41,10 +41,10 @@ class Saved extends Component {
             <Row>
               <Col size="md-12">
                 <Jumbotron>
-                  <h1 className="text-center">
-                    <strong>Google Books Search</strong>
-                  </h1>
-                  <h2 className="text-center">Your Personal Library</h2>
+                  <h1 className="text-center">Google Books Search</h1>
+                  <h3 id="title" className="text-center">
+                    Your Personal Library
+                  </h3>
                 </Jumbotron>
               </Col>
             </Row>
@@ -73,7 +73,9 @@ class Saved extends Component {
                       ))}
                     </List>
                   ) : (
-                    <h2 className="text-center">No Saved Books!</h2>
+                    <h3 id="title" className="text-center">
+                      No Saved Books!
+                    </h3>
                   )}
                 </Card>
               </Col>

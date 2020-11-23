@@ -10,7 +10,9 @@ function Book({ title, authors, description, image, link, Button }) {
         <div className="book-container">
           <Row className="flex-wrap-reverse">
             <Col size="md-8">
-              <h3 className="font-italic">{title}</h3>
+              <h3 id="title" className="font-italic">
+                {title}
+              </h3>
             </Col>
             <Col size="md-4">
               <div className="btn-container">

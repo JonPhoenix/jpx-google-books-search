@@ -70,10 +70,10 @@ class SearchBooks extends Component {
             <Row>
               <Col size="md-12">
                 <Jumbotron>
-                  <h1 className="text-center">
-                    <strong>Google Books Search</strong>
-                  </h1>
-                  <h2 className="text-center">Your Personal Library</h2>
+                  <h1 className="text-center">Google Books Search</h1>
+                  <h3 id="title" className="text-center">
+                    Your Personal Library
+                  </h3>
                 </Jumbotron>
               </Col>
               <Col size="md-12">
@@ -112,7 +112,9 @@ class SearchBooks extends Component {
                       ))}
                     </List>
                   ) : (
-                    <h2 className="text-center">{this.state.message}</h2>
+                    <h3 id="title" className="text-center">
+                      {this.state.message}
+                    </h3>
                   )}
                 </Card>
               </Col>

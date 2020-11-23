@@ -1,6 +1,5 @@
 /* Main Styles */
 h3,
-h2,
 p {
   color: #787878;
 }
@@ -61,13 +60,6 @@ body {
   float: right;
 }
 
-@media (max-width: 767px) {
-  .btn-container {
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
-}
-
 /* Footer */
 .light-text {
   color: #dddddd;
@@ -87,8 +79,20 @@ body {
 
 /* Navbar */
 .nav-link {
-  margin: 15px;
   color: #00158c;
   font-size: 1.2em;
   font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .btn-container {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  #title {
+    font-size: 1.2em;
+  }
 }
