@@ -1,3 +1,21 @@
+/* Main Styles */
+h3,
+h2,
+p {
+  color: #787878;
+}
+
+body {
+  background-image: url("../assets/book-wall.png");
+}
+
+.main-container {
+  background-image: url("../assets/background-1.png");
+  border-radius: 10px;
+  padding: 0 20px;
+  box-shadow: 0px 6px 6px 0px #b1b1b1;
+}
+
 /* Components */
 /* List */
 .list-overflow-container {
@@ -35,12 +53,12 @@
 }
 
 /* Book */
-.btn-container {
-  float: right;
+.book-container {
+  padding: 25px 20px;
 }
 
 .btn-container {
-  background-color: lightgray;
+  float: right;
 }
 
 @media (max-width: 767px) {
@@ -48,4 +66,29 @@
     margin-top: 15px;
     margin-bottom: 20px;
   }
+}
+
+/* Footer */
+.light-text {
+  color: #dddddd;
+}
+
+/* Jumbotron */
+.jumbo-style {
+  background-image: url("../assets/background-2.png");
+  color: #00158c;
+}
+
+/* Card */
+.card {
+  color: #00158c;
+  background-image: url("../assets/background-2.png");
+}
+
+/* Navbar */
+.nav-link {
+  margin: 15px;
+  color: #00158c;
+  font-size: 1.2em;
+  font-weight: 500;
 }

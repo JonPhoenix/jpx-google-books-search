@@ -4,9 +4,7 @@ import "../../css/style.css";
 // Exports both the List and ListItem components
 export const List = ({ children }) => (
   <div className="list-overflow-container">
-    <ul className="list-group">
-      {children}
-    </ul>
+    <ul className="list-group">{children}</ul>
   </div>
 );
 
