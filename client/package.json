@@ -1,7 +1,8 @@
 {
-  "name": "mern",
+  "homepage": "https://github.com/JonPhoenix/jpx-google-books-search",
+  "name": "jpx-google-books-search",
   "version": "0.1.0",
-  "description": "Mern Demo",
+  "description": "Create your personal library, find and save your favorite books!",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
