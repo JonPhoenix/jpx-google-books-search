@@ -2,11 +2,8 @@ const axios = require("axios");
 const db = require("../models");
 
 // Defining methods for the googleController
-
-// findAll searches the Google Books API and returns only the unsaved books
-
-// findAll returns books from the API with the specified info
 module.exports = {
+  // Searches the Google Books API and returns only unsaved books
   findAll: function(req, res) {
     const { query: params } = req;
 
@@ -14,6 +11,7 @@ module.exports = {
     console.log("params", params);
     console.log("URL", url);
 
+    // Returns results from the API with the specified info
     axios
       .get("https://www.googleapis.com/books/v1/volumes", {
         params
