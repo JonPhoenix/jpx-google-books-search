@@ -12,6 +12,7 @@ class Saved extends Component {
     books: [],
   };
 
+  // The component mounts and gets the saved books
   componentDidMount() {
     this.getSavedBooks();
   }
@@ -26,6 +27,8 @@ class Saved extends Component {
       .catch((err) => console.log(err));
   };
 
+  // Deletes a book from the db with a given id
+  // Then reloads the saved books from the db
   handleBookDelete = (id) => {
     API.deleteBook(id).then(() => this.getSavedBooks());
   };
@@ -39,15 +42,13 @@ class Saved extends Component {
               <h1 className="text-center">
                 <strong>Google Books Search</strong>
               </h1>
-              <h2 className="text-center">
-                Search for and Save Books of Interest
-              </h2>
+              <h2 className="text-center">Your Personal Library</h2>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
           <Col size="md-12">
-            <Card title="Saved Books" icon="download">
+            <Card title="Saved Books" icon="fas fa-bookmark">
               {this.state.books.length ? (
                 <List>
                   {this.state.books.map((book) => (
@@ -70,7 +71,7 @@ class Saved extends Component {
                   ))}
                 </List>
               ) : (
-                <h2 className="text-center">No Saved Books</h2>
+                <h2 className="text-center">No Saved Books!</h2>
               )}
             </Card>
           </Col>

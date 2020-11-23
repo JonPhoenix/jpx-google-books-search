@@ -9,12 +9,14 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List } from "../../components/List";
 
 class SearchBooks extends Component {
+  // Setting our component initial state
   state = {
     books: [],
     q: "",
-    message: "Search For A Book To Begin!",
+    message: `"A book is a dream that you hold in your hand" - Neil Gaiman`,
   };
 
+  // Handles input when searching a book
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
@@ -22,6 +24,7 @@ class SearchBooks extends Component {
     });
   };
 
+  // Gets all books and sets them to books
   getBooks = () => {
     API.getBooks(this.state.q)
       .then((res) =>
@@ -32,16 +35,18 @@ class SearchBooks extends Component {
       .catch(() =>
         this.setState({
           books: [],
-          message: "No New Books Found, Try a Different Query",
+          message: "No New Books Found, Try Again",
         })
       );
   };
 
+  // Submit form and gets books
   handleFormSubmit = (event) => {
     event.preventDefault();
     this.getBooks();
   };
 
+  // This method saves the book data and reloads books from the db
   handleBookSave = (id) => {
     const book = this.state.books.find((book) => book.id === id);
 
@@ -63,15 +68,13 @@ class SearchBooks extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>(React) Google Books Search</strong>
+                <strong>Google Books Search</strong>
               </h1>
-              <h2 className="text-center">
-                Search for and Save Books of Interest
-              </h2>
+              <h2 className="text-center">Your Personal Library</h2>
             </Jumbotron>
           </Col>
           <Col size="md-12">
-            <Card title="Book Search" icon="far fa-book">
+            <Card title="Book Search" icon="fas fa-bookmark">
               <Form
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
