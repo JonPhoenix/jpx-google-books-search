@@ -1,6 +1,6 @@
 const express = require("express");
-const mongoose = require('mongoose');
-const routes = require('./routes');
+const mongoose = require("mongoose");
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -16,10 +16,11 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB using Mongoose
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", { 
-  useNewUrlParser: true, 
-  useUnifiedTopology: true, 
-  useCreateIndex: true 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 });
 
 // Start the API server
